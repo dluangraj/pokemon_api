@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<header class="hero-section">
+    <h3 class="header-text">Welcome to Pokemon API! {{ current_user.email }}</h3>
+</header>
+
+<div class="container">
+    <h3>Here are your profile details</h3>
+    <ul class="list-group">
+        <li class="list-group-item">Email: {{ current_user.email }}</li>
+        <li class="list-group-item">Token: {{ current_user.token }}</li>
+        
+         <!--TODO: Add Access Key-->
+        
+    </ul>
+</div>
+
+<footer class="row" id="footer">
+    <div class="col-2 col-md-2">
+       <img src="../../static/images/pokeball_logo.png" alt="Pokeball Logo" id="footer-logo"> 
+    </div>
+    <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+            <h4>Platform</h4>
+            <p>Why Pokemon API?</p>
+            <p>Pokemon API</p>
+            <p>Donate</p>
+            <p>Spread the word</p>
+            <p>Our Process</p>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock content %}

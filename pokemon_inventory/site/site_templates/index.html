@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Flask Flashed Message to User -->
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat, msg in messages %}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{ msg }}
+                        <button type="button" class="close" data-dismiss="alert" onclick="this.parentElement.style.display='none'">&times;</button>
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+<div class="container">
+    <!-- Header Section -->
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>Let's build the future of Pokemon lovers together! </h2>
+            <h5>Create an amazing API tool for Pokemon developers.</h5>
+            <div>
+                <button class="btn btn-primary">View Our Docs</button>
+                <button class="btn btn-primary">Join Our Slack</button>
+            </div>
+        </div>
+        <!-- Header Image -->
+        <div class="col-12 col-md-6">
+            <img class="header-image" src="../../static/images/pokemon_main_logo.png" alt="Hero Header Image" >
+        </div>
+    </header>
+        <!-- End of Header Section -->
+
+        <!-- Star of Middle Section -->
+        <section class="row">
+            <div class="col-12" id="middle-text">
+                <h2>Display Your Collection!</h2>
+                <p>You can harness the power of an API to expand your collection</p>
+            </div>
+        </section>
+        <!-- End of Middle Section -->
+
+        <!-- Collection of Features Seciotn -->
+        <section class="row" id="features-section">
+            <div class="col-12 col-md-4">
+              <img src="../../static/images/bulbasaur_icon.png" alt="Bulbasaur Image" id="bulbasaur-image"> 
+              <h4>Dedicated API Routes</h4>
+              <p>
+                  If you are a fan of using traditional API routes, we have those for you!
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+            <img src="../../static/images/charmander_icon.png" alt="Charmander Image" id="charmander-image">
+            <h4>GraphQL API Route</h4>
+            <p>
+                If you want ALL data from one endpoint, we have that too!
+            </p>
+           </div>
+
+            <div class="col-12 col-md-4">
+               <img src="../../static/images/squirtle_icon.png" alt="Squirtle Image" id="squirtle-image">
+               <h4>Backed by a PostgreSQL Database</h4>
+               <p>
+                   All data will be persisted inside of a secure Postgres Database
+               </p>
+            </div>
+        </section>
+        <!-- End of Collection of Features -->
+
+        <!-- Start of Community Section -->
+        <section class="row">
+            <div class="col-12 col-md-6">
+                <img src="../../static/images/pokemon_index.png" alt="Chibi Image" id="index-pokemon-image">               
+            </div>
+            <div class="col-12 col-md-6">
+                <h4>Talk with Like-Minded Pokemon Lovers</h4>
+                <p>
+                    Talk with other devs around the world and collab 
+                    on projects with your data. Join our slack channel and 
+                    give a start to the project on Github!
+                </p>
+                <div>
+                    <button class="btn btn-primary">View on Github</button>
+                    <button class="btn btn-primary">Join our Slack Channel</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- End of Community Section -->
+
+    
+</div>
+
+ <!-- Start of Footer -->
+
+ <footer class="row" id="footer">
+    <div class="col-2 col-md-2">
+       <img src="../../static/images/pokeball_logo.png" alt="Pokeball Logo" id="footer-logo"> 
+    </div>
+    <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+            <h4>Platform</h4>
+            <p>Why Pokemon API?</p>
+            <p>Pokemon API</p>
+            <p>Donate</p>
+            <p>Spread the word</p>
+            <p>Our Process</p>
+        </div>
+    </div>
+</footer>
+
+{% endblock content %}

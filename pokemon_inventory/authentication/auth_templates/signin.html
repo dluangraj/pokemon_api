@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <aside class="col-12 col-md-6">
+            <h2>Sign Into Your Account!</h2>
+            {% include 'forms.html' %}
+        </aside>
+    </div>
+</main>
+
+<!-- Footer Nav Bar -->
+<footer class="row" id="footer">
+    <div class="col-2 col-md-2">
+       <img src="../../static/images/pokeball_logo.png" alt="Pokeball Logo" id="footer-logo"> 
+    </div>
+    <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+            <h4>Platform</h4>
+            <p>Why Pokemon API?</p>
+            <p>Pokemon API</p>
+            <p>Donate</p>
+            <p>Spread the word</p>
+            <p>Our Process</p>
+        </div>
+    </div>
+</footer>
+
+{% endblock content %}
